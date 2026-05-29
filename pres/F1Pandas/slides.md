@@ -200,6 +200,24 @@ Metodologia: progresja czasów okrążeń w trakcie wyścigu, era tankowania (19
 -->
 
 ---
+layout: default
+---
+
+<div class="flex flex-col items-center gap-2">
+  <img src="./images/f1_fuel_impact_Silverstone_Circuit.png" class="max-h-[28rem] max-w-full object-contain rounded shadow" />
+  <p class="text-sm opacity-70">Silverstone (najczęściej ścigany tor)</p>
+</div>
+
+---
+layout: default
+---
+
+<div class="flex flex-col items-center gap-2">
+  <img src="./images/f1_fuel_impact_Hungaroring.png" class="max-h-[28rem]  max-w-full object-contain rounded shadow" />
+  <p class="text-sm opacity-70">Hungaroring (2. historyczny tor)</p>
+</div>
+
+---
 layout: section
 ---
 
