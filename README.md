@@ -21,7 +21,7 @@ Dane: [`jtrotman/formula-1-race-data`](https://www.kaggle.com/datasets/jtrotman/
 | Plik | Opis |
 |------|------|
 | [`Project1.ipynb`](Project1.ipynb) | Główny notebook z analizami |
-| [`REPORT.md`](REPORT.md) | Pełny raport z wnioskami |
+| [`REPORT.pdf`](REPORT.pdf) | Pełny raport z wnioskami |
 | [`pres/F1Pandas/slides-export.pdf`](pres/F1Pandas/slides-export.pdf) | Prezentacja (PDF) |
 | [`pres/F1Pandas/slides-export.pptx`](pres/F1Pandas/slides-export.pptx) | Prezentacja (PowerPoint) |
 
