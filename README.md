@@ -1,32 +1,33 @@
 # F1 Data Science: Technological Evolution & 2026 Prediction
 
-## 📋 Opis Projektu
-Projekt skupia się na analizie wpływu postępu technicznego w Formule 1 na osiągi, niezawodność i strukturę rywalizacji, kończąc się modelem predykcyjnym dla nowej ery regulacyjnej w 2026 roku.
+Analiza ewolucji technicznej Formuły 1 (1950–2026) z wykorzystaniem danych wyścigowych z Kaggle i bazy DuckDB.
 
-## 🛠️ Kluczowe Etapy Analizy
+## Analizy
 
-### 1. Analiza Predykcyjna 2026: „Model Przejścia Regulacyjnego”
-- **Metoda**: Machine Learning (Random Forest / XGBoost).
-- **Cel**: Wykorzystanie danych z lat 'resetu' (2014, 2022) do prognozowania zmian w układzie sił.
+1. **Wpływ paliwa na czas okrążenia** – porównanie progresji lap times w erze z refuelingiem (1994–2009) vs bez (2010+) na Silverstone i Hungaroring
+2. **Efficiency Gap** – dominacja punktowa Top 3 konstruktorów w każdym sezonie
+3. **Niezawodność technologii** – trend DNF rate od 1950 do 2026 (48% → 21%)
+4. **"Prawo Moore'a" w F1** – ewolucja średniego najszybszego okrążenia sezonowego (1982–2026)
+5. **Najlepsi konstruktorzy** – ranking historyczny wg średniej liczby punktów na sezon
 
-### 2. Strategiczne „Under-fueling” i Pit-Stops (Big Data)
-- **Metoda**: Apache Spark (`lap_times.csv`).
-- **Cel**: Przetwarzanie milionów rekordów w celu zbadania korelacji między masą paliwa a tempem w różnych erach.
+## Stack
 
-### 3. „Efficiency Gap” – Dominacja technologiczna zespołów
-- **Metoda**: Analiza wskaźnika *Supertimes* (%).
-- **Cel**: Statystyczny pomiar 'rozwarstwienia' stawki i identyfikacja okresów największej przewagi technicznej.
+`DuckDB` · `Pandas` · `Matplotlib` · `Seaborn` · `KaggleHub`
 
-### 4. Analiza „Niezawodności Technologii” (Dumping of DNFs)
-- **Metoda**: Eksploracyjna analiza danych (EDA) tabeli `status.csv`.
-- **Cel**: Ilościowy dowód na postęp inżynieryjny poprzez spadek awaryjności podzespołów mechanicznych.
+Dane: [`jtrotman/formula-1-race-data`](https://www.kaggle.com/datasets/jtrotman/formula-1-race-data) + [`jtrotman/formula-1-race-events`](https://www.kaggle.com/datasets/jtrotman/formula-1-race-events)
 
-### 5. „Prawo Moore'a” w F1: Ewolucja tempa kwalifikacyjnego
-- **Metoda**: Analiza szeregów czasowych (Time Series).
-- **Cel**: Badanie przyrostu prędkości na torach historycznych (Monza, Monaco) jako miara tempa innowacji.
+## Pliki
 
-## 📈 Wymagania Techniczne
-- **Pre-processing**: Czyszczenie braków danych (`\N`), mapowanie ID, normalizacja czasu.
-- **Wizualizacja**: Dashboardy Seaborn/Matplotlib.
-- **Statystyka**: Testy istotności (ANOVA/T-test) dla różnic między erami silnikowymi.
-- **Big Data**: Przetwarzanie rozproszone w środowisku Spark.
+| Plik | Opis |
+|------|------|
+| [`Project1.ipynb`](Project1.ipynb) | Główny notebook z analizami |
+| [`REPORT.md`](REPORT.md) | Pełny raport z wnioskami |
+| [`pres/F1Pandas/slides-export.pdf`](pres/F1Pandas/slides-export.pdf) | Prezentacja (PDF) |
+| [`pres/F1Pandas/slides-export.pptx`](pres/F1Pandas/slides-export.pptx) | Prezentacja (PowerPoint) |
+
+## Uruchomienie
+
+```bash
+uv sync
+jupyter notebook Project1.ipynb
+```
